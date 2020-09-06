@@ -11,12 +11,13 @@ from aiogram import Bot, Dispatcher, executor, types
 import torchvision.transforms as transforms
 
 
-from style_transfer import model_cnn
-from style_transfer import cnn_normalization_mean, cnn_normalization_std
-from style_transfer import StyleTransfer
+from style_transfer import model_cnn,cnn_normalization_mean, cnn_normalization_std,StyleTransfer
+
 
 import aiohttp
 from aiogram.utils.helper import Helper, HelperMode, ListItem
+
+
 
 API_TOKEN = '1081570508:AAGHWaqAQvCrBlpDsjZlHYZC6HYobdY_tDI'
 PROXY_URL = 'socks5://178.128.203.1:1080'

@@ -8,7 +8,7 @@ import torch.optim as optim
 from torchvision import  models, transforms
 
 from PIL import Image
-import matplotlib.pyplot as plt
+
 
 
 
@@ -59,8 +59,7 @@ class StyleTransfer(nn.Module):
         content_losses = []
         style_losses = []
 
-        # assuming that cnn is a nn.Sequential, so we make a new nn.Sequential
-        # to put in modules that are supposed to be activated sequentially
+
         model = nn.Sequential(normalization)
 
         i = 0
@@ -217,15 +216,6 @@ class Normalization(nn.Module):
 
 
 
-plt.ion()
 
-def imshow(tensor, title=None):
-    image = tensor.cpu().clone()
-    image = image.squeeze(0)
-    image = unloader(image)
-    plt.imshow(image)
-    if title is not None:
-        plt.title(title)
-    plt.pause(0.001)
 
 
